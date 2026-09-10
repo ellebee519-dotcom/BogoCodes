@@ -1,0 +1,25 @@
+name: Midnight BOGO Scour
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight
+  workflow_dispatch: 
+
+jobs:
+  scour:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: node scripts/scour.mjs
+      - name: Commit Results
+        run: |
+          git config --local user.email "bot@bogocodes.com"
+          git config --local user.name "BogoBot"
+          git add app/api/addresses/route.ts
+          git commit -m "Midnight Update: Fresh Deals" || exit 0
+          git push

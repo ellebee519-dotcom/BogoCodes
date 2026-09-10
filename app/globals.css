@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+ :root{
+  --color-navy: #1A2B48;
+  --color-accentgreen: #B2D290;
+  --color-mint: #B8D8D0;
+  --color-backgroundwhite: #FFFFFF;
+  --color-slateblue: #5A6B9C;
+  --radius-btn: 8px;
+  --radius-card: 12px;
+  --shadow-card: 0 4px 24px 0 rgba(0,0,0,0.05);
+/* removed extra closing brace */
+
+html,body,#__next {
+  height:100%;
+  background: var(--color-backgroundwhite);
+  color: var(--color-navy);
+  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  color: var(--color-navy);
+}
+
+ .btn-primary {
+  background-color: var(--color-accentgreen);
+  color: #fff;
+  border-radius: var(--radius-btn);
+  padding: 0.85rem 2.25rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: var(--shadow-card);
+}
+
+ .btn-secondary {
+  background: transparent;
+  color: var(--color-navy);
+  border: 2px solid rgba(26,43,72,0.08);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-btn);
+}
+
+ .ui-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+ .badge-accent {
+  background: var(--color-mint);
+  color: var(--color-navy);
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-card);
+ }
+
+/* Utility classes for new theme */
+.bg-mint {
+  background: var(--color-mint);
+}
+.bg-navy {
+  background: var(--color-navy);
+}
+.bg-accentgreen {
+  background: var(--color-accentgreen);
+}
+.text-navy {
+  color: var(--color-navy);
+}
+.text-slateblue {
+  color: var(--color-slateblue);
+}
+.rounded-btn {
+  border-radius: var(--radius-btn);
+}
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+}
