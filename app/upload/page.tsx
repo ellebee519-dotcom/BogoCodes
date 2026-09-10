@@ -1,8 +1,12 @@
-export default function UploadPage() {
-  return (
-    <div style={{ padding: "50px", fontFamily: "sans-serif", textAlign: "center" }}>
-      <h1>Upload Page</h1>
-      <p>This page is currently under maintenance.</p>
-    </div>
-  );
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  env: {
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+  },
+  allowedDevOrigins: ['100.115.92.198', '100.115.92.198:3000'],
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
+
+module.exports = nextConfig;
